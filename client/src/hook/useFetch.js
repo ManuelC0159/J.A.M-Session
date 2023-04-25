@@ -42,7 +42,6 @@ const useFetch = (endpoint , query)=>{
         fetchData();
       }
 
-      console.log("useFetch.js data:" + data);
 
       return{ data, isLoading, error, refetch};
 }
