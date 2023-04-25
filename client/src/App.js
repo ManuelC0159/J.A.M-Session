@@ -1,8 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 
+import useFetch from './hook/useFetch'
+
 function App() {
+  const {data, isLoading, error} = useFetch('search', {
+    query: 'React',
+    num_pages: 1
+  })
+
+  console.log(data);
   return (
+    
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

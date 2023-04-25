@@ -9,7 +9,7 @@ const useFetch = (endpoint , query)=>{
 
     const options = {
         method: 'GET',
-        url: 'https://jsearch.p.rapidapi.com/${endpoint}',
+        url: 'https://jsearch.p.rapidapi.com/search',
         params: { ... query },
         headers: {
           'content-type': 'application/octet-stream',
@@ -41,6 +41,8 @@ const useFetch = (endpoint , query)=>{
         setIsLoading(true);
         fetchData();
       }
+
+      console.log("useFetch.js data:" + data);
 
       return{ data, isLoading, error, refetch};
 }
