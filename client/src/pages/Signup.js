@@ -54,17 +54,28 @@ export default function SignIn() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+
+           
+
+            Sign Up
+
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <TextField
               margin="normal"
               required
               fullWidth
+
               id="Name"
               label="Your Name"
               name="Name"
               autoComplete="Name"
+
+              id="name"
+              label="Your Name"
+              name="name"
+              autoComplete="name"
+
               autoFocus
             />
             <TextField
@@ -97,12 +108,20 @@ export default function SignIn() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign In
+
+              
+
+              Sign Up
+
             </Button>
             <Grid container>
               
               <Grid item>
+
                 
+
+               
+
               </Grid>
             </Grid>
           </Box>
