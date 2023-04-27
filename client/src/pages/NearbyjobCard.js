@@ -3,7 +3,7 @@ const PopularJobCard =({item, selectedJob,handleCardClick}) =>{
     return(
         <button
         onClick={()=> handleCardClick(item)}>
-            <button >t
+            <button >test
                 <img height="200px" width="200px"src = {item.employer_logo}
                 resizeMode = "contain"></img>
             </button>
