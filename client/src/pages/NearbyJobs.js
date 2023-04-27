@@ -2,6 +2,7 @@ import React, {useState } from 'react'
 import {Router, useHistory} from 'react-router-dom'
 import useFetch from '../hook/useFetch';
 import NearbyJobCard from './NearbyjobCard';
+//test
 
 function NearbyJobs() {
 
@@ -24,7 +25,7 @@ function NearbyJobs() {
             <div height ="100px" >
                 <ul  size="small">
                 <p>{data.map((info) => (
-                    <li>test
+                    <li>
                         <NearbyJobCard
                         item={info}
                         key={'nearby-job-${info.job_id}'}
