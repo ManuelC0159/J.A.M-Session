@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/ManuelC0159/J.A.M-Session#readme",
   "dependencies": {
-    "concurrently": "^8.0.1"
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^8.0.1",
+    "detect-port-alt": "^1.1.6"
   }
 }
