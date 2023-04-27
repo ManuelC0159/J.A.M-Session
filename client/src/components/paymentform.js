@@ -2,21 +2,19 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 
 export default function PaymentForm() {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        Payment method
+       Your Work History
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={10}>
         <Grid item xs={12} md={6}>
           <TextField
-            required
+           
             id="cardName"
-            label="Name on card"
+            label="Where Do You Work Now?"
             fullWidth
             autoComplete="cc-name"
             variant="standard"
@@ -24,9 +22,9 @@ export default function PaymentForm() {
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
-            required
+            
             id="cardNumber"
-            label="Card number"
+            label="For How Long?"
             fullWidth
             autoComplete="cc-number"
             variant="standard"
@@ -34,9 +32,25 @@ export default function PaymentForm() {
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
-            required
+            id="cvv"
+            label="What Is Your Job Title?"
+            fullWidth
+            autoComplete="cc-csc"
+            variant="standard"
+          />
+        </Grid><Grid item xs={12} md={6}>
+          <TextField
+            id="cvv"
+            label="What Do You Do?"
+            fullWidth
+            autoComplete="cc-csc"
+            variant="standard"
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
             id="expDate"
-            label="Expiry date"
+            label="Where'd You Work Before?"
             fullWidth
             autoComplete="cc-exp"
             variant="standard"
@@ -44,19 +58,63 @@ export default function PaymentForm() {
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
-            required
             id="cvv"
-            label="CVV"
-            helperText="Last three digits on signature strip"
+            label="For How Long?"
             fullWidth
             autoComplete="cc-csc"
             variant="standard"
           />
         </Grid>
-        <Grid item xs={12}>
-          <FormControlLabel
-            control={<Checkbox color="secondary" name="saveCard" value="yes" />}
-            label="Remember credit card details for next time"
+        <Grid item xs={12} md={6}>
+          <TextField
+            id="cvv"
+            label="What Was Your Job Title?"
+            fullWidth
+            autoComplete="cc-csc"
+            variant="standard"
+          />
+        </Grid><Grid item xs={12} md={6}>
+          <TextField
+            id="cvv"
+            label="What Did You Do?"
+            fullWidth
+            autoComplete="cc-csc"
+            variant="standard"
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
+            id="expDate"
+            label="And Before That?"
+            fullWidth
+            autoComplete="cc-exp"
+            variant="standard"
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
+            id="cvv"
+            label="For How Long?"
+            fullWidth
+            autoComplete="cc-csc"
+            variant="standard"
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
+            id="cvv"
+            label="What Was Your Job Title?"
+            fullWidth
+            autoComplete="cc-csc"
+            variant="standard"
+          />
+        </Grid><Grid item xs={12} md={6}>
+          <TextField
+            id="cvv"
+            label="What Did You Do?"
+            fullWidth
+            autoComplete="cc-csc"
+            variant="standard"
           />
         </Grid>
       </Grid>
