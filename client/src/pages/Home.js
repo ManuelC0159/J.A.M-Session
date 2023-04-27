@@ -1,9 +1,11 @@
-
+import NearbyJobs from "./NearbyJobs";
+import PopularJobs from "./PopularJobs";
 
 const Home = () => {
   return (
-    <div className="container">
-   <h1>welcome</h1>
+    <div className="container">Welcome
+      <PopularJobs/>
+      <NearbyJobs/>
     </div>
   );
 };
