@@ -24,7 +24,7 @@ function NearbyJobs() {
             <div height ="100px" >
                 <ul  size="small">
                 <p>{data.map((info) => (
-                    <li>
+                    <li>test
                         <NearbyJobCard
                         item={info}
                         key={'nearby-job-${info.job_id}'}
