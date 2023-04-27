@@ -17,7 +17,8 @@ import PaymentForm from '../components/paymentform';
 import Review from '../components/review';
 
 
-const steps = ['About You', 'Work History', 'Contact Info'];
+const steps = ['About You', 'Work History', 'Contact Info'] ;
+
 
 function getStepContent(step) {
   switch (step) {
@@ -32,7 +33,11 @@ function getStepContent(step) {
   }
 }
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+   primary: { main: '#000' },
+  }
+});
 
 export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
