@@ -1,11 +1,21 @@
+import React from 'react';
+import Hero from '../Components/Homepage/Hero';
+import RecentJobs from '../Components/Homepage/RecentJobs';
+import JobCategories from '../Components/Homepage/JobCategories';
+import TopCompanies from '../Components/Homepage/TopCompanies';
+import Footer from '../Components/Homepage/Footer';
+;
 
-
-const Home = () => {
+function HomePage() {
   return (
-    <div className="container">
-   <h1>welcome</h1>
-    </div>
+    <>
+      <Hero />
+      <RecentJobs />
+      <JobCategories />
+      <TopCompanies />
+      <Footer />
+    </>
   );
-};
+}
 
-export default Home;
+export default HomePage;

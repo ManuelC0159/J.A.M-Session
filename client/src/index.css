@@ -11,3 +11,173 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Global styles for body, links, and lists */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #0077cc;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.search-bar {
+  display: flex;
+}
+
+/* Styling for search bar elements */
+.search-bar input[type="text"] {
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  padding: 10px;
+  width: 70%;
+}
+
+.search-bar button[type="submit"] {
+  background-color: #0077cc;
+  border-radius: 0 4px 4px 0;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  width: 30%;
+}
+
+/* Hero section styles */
+.hero {
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background-color: #0077cc;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+/* Recent jobs section styles */
+.recent-jobs {
+  margin: 50px 0;
+  padding: 0 20px;
+}
+
+.recent-jobs h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.job-listings {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.job-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.job-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.job-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.job-card button {
+  background-color: #0077cc;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+/* Footer styles */
+footer {
+  background-color: #f7f7f7;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.social-media {
+  display: flex;
+}
+
+.social-media img {
+  margin-right: 10px;
+}
+
+/* Responsive styles for small screens like mobile phones */
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: 300px;
+  }
+  
+  /* Adjust spacing for the search bar */
+  .search-bar input[type="text"] {
+    width: 60%;
+  }
+
+  .search-bar button[type="submit"] {
+    width: 40%;
+  }
+
+  /* Modify the grid on recent jobs section */
+  .job-listings {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

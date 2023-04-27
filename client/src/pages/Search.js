@@ -1,19 +1,45 @@
-import useFetch from './hook/useFetch'
+import React, { useState } from 'react';
+import useFetch from './useFetch';
+import JobCard from './JobCard';
 
-let userSearch = //Enter user data here, must be a string
-function callAPI(search){
-    const {data, isLoading, error} = useFetch('search', {
-        query: userSearch,
-        num_pages: 1
-      })
-      return data;
+function SearchPage() {
+  const [searchQuery, setSearchQuery] = useState('');
 
-      /*data we need job tittle, location(job city/country), logo, company name, about, job apply link */ 
+  const handleSearch = (event) => {
+    event.preventDefault();
+    setSearchQuery(event.target.value);
+  };
+
+  const { data, isLoading, error, refetch } = useFetch('search', {
+    query: searchQuery,
+    num_pages: 1
+  });
+
+  return (
+    <div>
+      <form onSubmit={handleSearch}>
+        <label>
+          Search:
+          <input type="text" value={searchQuery} onChange={handleSearch} />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+
+      {isLoading && <p>Loading...</p>}
+      {error && <p>{error.message}</p>}
+      {!isLoading && data.length === 0 && <p>No results found.</p>}
+      {!isLoading && data.length > 0 && (
+        <div>
+          <p>Showing {data.length} results for "{searchQuery}"</p>
+          {data.map((job) => (
+            <JobCard key={job.id} job={job} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
-  console.log(data);
 
-  export default callAPI;
+export default SearchPage;
 
-
-//build front it here 
 
