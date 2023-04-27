@@ -16,6 +16,7 @@ function PopularJobs(){
     const [selectedJob, setSelectedJob] = useState();
     const handleCardClick = (item)=>{
     setSelectedJob(item.job_id)
+    Router.push('/job-details/${item.job_id}')
     }   
     const {data} = useFetch('search', {
         query: 'React',
@@ -25,7 +26,6 @@ function PopularJobs(){
         <div>
             <div>
                 <p>Popular Jobs</p>
-                <button>Show All</button>
             </div>
 
 
