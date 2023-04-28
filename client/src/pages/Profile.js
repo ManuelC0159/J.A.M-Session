@@ -15,7 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AddressForm from '../components/addressform';
 import PaymentForm from '../components/paymentform';
 import Review from '../components/review';
-
+import ResponsiveAppBar from '../components/navbar';
 
 const steps = ['About You', 'Work History', 'Contact Info'] ;
 
@@ -51,6 +51,9 @@ export default function Checkout() {
   };
 
   return (
+    <>
+    <ResponsiveAppBar />
+    
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <AppBar
@@ -113,5 +116,6 @@ export default function Checkout() {
         
       </Container>
     </ThemeProvider>
+    </>
   );
 }
