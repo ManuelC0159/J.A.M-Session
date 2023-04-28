@@ -15,4 +15,6 @@ code {
 
 body {
   background-color: rgb(28, 28, 159);
+  margin: 0;
+  padding: 0;
 }

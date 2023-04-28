@@ -1,4 +1,5 @@
 import React from 'react'
+
 const Company = (companyLogo, jobTittle, companyName, location)=>{
     return (
         <div>
