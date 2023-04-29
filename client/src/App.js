@@ -30,12 +30,7 @@ function App() {
     </BrowserRouter>
     
   );
-  // render () ;
-  //   return (
-  //     <div>
-  //       <ResponsiveAppBar />
-  //     </div>
-  //   );
+
   }
 
 
