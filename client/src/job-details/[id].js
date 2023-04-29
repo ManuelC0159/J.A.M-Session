@@ -14,7 +14,7 @@ const JobDetails=() =>  {
         extended_publisher_details: 'false'
     });
     console.log(data)
-    if(!data[0].employer_name){
+    if(!data){
         return <div>Loading...</div>
     }
     return(

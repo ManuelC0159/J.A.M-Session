@@ -1,15 +1,15 @@
 import React, {useState } from 'react'
-import {Router, useHistory} from 'react-router-dom'
+import {Router, useNavigate} from 'react-router-dom'
 import useFetch from '../hook/useFetch';
 import NearbyJobCard from './NearbyjobCard';
 //test
 
 function NearbyJobs() {
-
+    const navigate = useNavigate()
     const [selectedJob, setSelectedJob] = useState();
     const handleCardClick = (item)=>{
-    setSelectedJob(item.job_id)
-
+        setSelectedJob(item.job_id)
+        navigate(`/job-details/${item.job_id}`)
     }   
     const {data} = useFetch('search', {
         query: 'React',
