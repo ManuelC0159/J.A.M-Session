@@ -32,6 +32,13 @@ const JobDetails=() =>  {
                 jobTitle = {data?.[0]?.job_title}
                 companyName = {data?.[0]?.employer_name}
                 location = {data?.[0]?.job_country}
+                location_city ={data?.[0]?.job_city}
+                applyLink={data?.[0]?.job_apply_link}
+                jobAbout = {data?.[0]?.job_description}
+                employmentType ={data?.[0]?.job_employment_typ}
+                googleLink={data?.[0]?.job_google_link}
+                location_state={data?.[0]?.job_state}
+                
                 />
                 </div>
             </div>

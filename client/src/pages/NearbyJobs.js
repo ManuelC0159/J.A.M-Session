@@ -15,7 +15,7 @@ function NearbyJobs() {
         query: 'React',
         pages:1
     })
-    //console.log(data[0].employer_name)
+    console.log(data)
 
     return(
         <div>
