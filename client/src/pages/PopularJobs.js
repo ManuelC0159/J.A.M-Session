@@ -1,5 +1,5 @@
 import React, {useState } from 'react'
-import {Router} from 'react-router-dom'
+import {Router, useNavigate} from 'react-router-dom'
 import useFetch from '../hook/useFetch';
 import PopularjobCard from "./PopularJobCard"
 import PopularJobCard from './PopularJobCard';
@@ -14,9 +14,10 @@ function PopularJobs(){
                     handleCardClick={handleCardClick}/>
   */
     const [selectedJob, setSelectedJob] = useState();
+    const navigate = useNavigate();
     const handleCardClick = (item)=>{
     setSelectedJob(item.job_id)
-    Router.push('/job-details/${item.job_id}')
+    navigate(`/job-details/${item.job_id}`)
     }   
     const {data} = useFetch('search', {
         query: 'React',

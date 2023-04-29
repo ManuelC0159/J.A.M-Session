@@ -19,7 +19,7 @@ const PopularJobCard =({item, selectedJob,handleCardClick}) =>{
             </div>
             <div height="250px" width="250px">
                 <p>
-                    {item.job_country}
+                    {item.job_employment_type}
                 </p>
             </div>
         </button>

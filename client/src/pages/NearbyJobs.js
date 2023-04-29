@@ -15,12 +15,13 @@ function NearbyJobs() {
         query: 'React',
         pages:1
     })
+    //console.log(data[0].employer_name)
+
     return(
         <div>
             <div>
                 <p>Nearby Jobs</p>
             </div>
-
 
             <div height ="100px" >
                 <ul  size="small">
@@ -28,7 +29,7 @@ function NearbyJobs() {
                     <li>
                         <NearbyJobCard
                         item={info}
-                        key={'nearby-job-${info.job_id}'}
+                        key={`nearby-job-${info.job_id}`}
                         handleCardClick={handleCardClick}//needs to route to job details page
                         />
                     </li>

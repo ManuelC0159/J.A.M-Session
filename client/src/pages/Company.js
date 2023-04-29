@@ -1,12 +1,23 @@
 import React from 'react'
-
-const Company = (companyLogo, jobTittle, companyName, location)=>{
+const Company = ({companyLogo, jobTittle, companyName, location})=>{
     return (
         <div>
-            <p>{companyLogo}</p>
-            <p >{jobTittle}</p>
-            <p>{companyName}</p>
-            <p>{location}</p>
+            <div>
+                <img src={companyLogo}  alt= "IMG ERROR"></img>
+            </div>
+
+            <div>
+                <p >{jobTittle}</p>
+            </div>
+
+            <div>
+                <p>{companyName}</p>
+            </div>
+
+            <div>
+                <p>{location}</p>
+            </div>
+
         </div>
     )
 }
