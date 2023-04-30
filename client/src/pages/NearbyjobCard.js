@@ -1,29 +1,22 @@
-import React from 'react'//test
-const PopularJobCard =({item, selectedJob,handleCardClick}) =>{
-    return(
-        <button
-        onClick={()=> handleCardClick(item)}>
-            <button >test
-                <img height="200px" width="200px"src = {item.employer_logo}
-                resizeMode = "contain"></img>
-            </button>
-            <p height="250px" width="250px"numberOfLines ={1}>
-                {item.employer_name}
-                
-            </p>
+import React from 'react';
 
-            <div height="250px" width="250px">
-                <p numberOfLines={1}>
-                    {item.job_title}
-                </p>
-            </div>
-            <div height="250px" width="250px">
-                <p>
-                    {item.job_employment_type}
-                </p>
-            </div>
-        </button>
-    )
-}
+const PopularJobCard = ({ item, selectedJob, handleCardClick }) => {
+  return (
+    <div className="card-container" onClick={() => handleCardClick(item)}>
+      <div className="card">
+        <img
+          className="card-image"
+          src={item.employer_logo}
+          alt={item.employer_name}
+        />
+        <div className="card-content">
+          <h2 className="card-title">{item.employer_name}</h2>
+          <p className="card-subtitle">{item.job_title}</p>
+          <p className="card-country">{item.job_country}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default PopularJobCard
+export default PopularJobCard;

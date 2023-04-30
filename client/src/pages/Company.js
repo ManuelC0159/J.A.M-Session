@@ -1,42 +1,34 @@
-import React from 'react'
-const Company = ({companyLogo, jobTittle, companyName, location, applyLink, jobAbout, location_city, employmentType, googleLink, location_state})=>{
-    return (
-        <div>
-            <div>
-                <img src={companyLogo}  alt= "IMG ERROR"></img>
-            </div>
+import React from 'react';
 
-            <div>
-                <p >{jobTittle}</p>
-            </div>
-
-            <div>
-                <p>{companyName}</p>
-            </div>
-
-            <div>
-                <a href = {applyLink}>Apply Here</a>
-            </div>
-
-            <div>
-                <p>{jobAbout}</p>
-            </div>
-
-            <div>
-                <p>{location_city}, {location_state}, {location}</p>
-            </div>
-
-
-            <div>
-                <a href ={googleLink}>Google Link</a>
-            </div>
-            
-            <div>
-                <p>{employmentType}</p>
-            </div>
-
+const Company = ({ companyLogo, jobTitle, companyName, location, applyLink, jobAbout, locationCity, employmentType, googleLink, locationState }) => {
+  return (
+    <div className="company-container">
+      <div className="company-header">
+        <img className="company-logo" src={companyLogo} alt="Company Logo" />
+        <div className="company-title">
+          <h1>{jobTitle}</h1>
+          <h2>{companyName}</h2>
         </div>
-    )
+      </div>
+      <div className="company-body">
+        <div className="company-about">
+          <h3>About the Job</h3>
+          <p>{jobAbout}</p>
+        </div>
+        <div className="company-location">
+          <h3>Location</h3>
+          <p>{locationCity}, {locationState}, {location}</p>
+          <a href={googleLink}>View on Google Maps</a>
+        </div>
+        <div className="company-apply">
+          <a className="apply-link" href={applyLink}>Apply Now</a>
+        </div>
+      </div>
+      <div className="company-footer">
+        <p>{employmentType}</p>
+      </div>
+    </div>
+  );
 }
 
-export default Company
+export default Company;
