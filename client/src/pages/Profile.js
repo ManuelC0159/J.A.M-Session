@@ -35,7 +35,7 @@ function getStepContent(step) {
 
 const theme = createTheme({
   palette: {
-   primary: { main: '#000' },
+   primary: { main: '#1976d2' },
   }
 });
 
@@ -98,7 +98,7 @@ export default function Checkout() {
                   </Button>
                 )}
 
-                <Button
+                <Button class = 'setupprofile-button'
                   variant="contained"
                   onClick={handleNext}
                   sx={{ mt: 3, ml: 1 }}
