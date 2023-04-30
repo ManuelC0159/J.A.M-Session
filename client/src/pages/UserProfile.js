@@ -15,19 +15,15 @@ import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
 import ResponsiveAppBar from '../components/navbar';
+import Pricing from '../components/userprofile';
 
 export default function Copyright(props) {
   return (
     <>
     <ResponsiveAppBar />
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      
-      <Link color="inherit" href="https://mui.com/">
-       
-      </Link>{' '}
-     
-    </Typography>
+    <Pricing />
     </>
+    
 
     
   );
