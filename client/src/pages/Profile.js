@@ -16,6 +16,7 @@ import AddressForm from '../components/addressform';
 import PaymentForm from '../components/paymentform';
 import Review from '../components/review';
 import ResponsiveAppBar from '../components/navbar';
+import useProfileData, { ProfileDataProvider } from '../context/useProfileData';
 
 const steps = ['About You', 'Work History', 'Contact Info'] ;
 
@@ -38,6 +39,21 @@ const theme = createTheme({
    primary: { main: '#1976d2' },
   }
 });
+
+const FormSubmission = () => {
+  const [profileData]=useProfileData()
+  React.useEffect(()=>{
+    console.log(profileData)
+  },[])
+  return (
+    <React.Fragment>
+      <Typography variant="h5" gutterBottom>
+        Thank you for your submission!
+      </Typography>
+      <Typography variant="subtitle1">{JSON.stringify(profileData, null, 2)}</Typography>
+      </React.Fragment>
+  )
+}
 
 export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -78,18 +94,13 @@ export default function Checkout() {
                 <StepLabel>{label}</StepLabel>
               </Step>
             ))}
-          </Stepper>
+          </Stepper>  <ProfileDataProvider>
+
           {activeStep === steps.length ? (
-            <React.Fragment>
-              <Typography variant="h5" gutterBottom>
-                
-              </Typography>
-              <Typography variant="subtitle1">
-               
-              </Typography>
-            </React.Fragment>
+            <FormSubmission />
+          
           ) : (
-            <React.Fragment>
+          <>
               {getStepContent(activeStep)}
               <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                 {activeStep !== 0 && (
@@ -106,8 +117,9 @@ export default function Checkout() {
                   {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
                 </Button>
               </Box>
-            </React.Fragment>
+           </>
           )}
+           </ProfileDataProvider>
         </Paper>
         
       </Container>
