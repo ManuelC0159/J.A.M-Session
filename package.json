@@ -2,6 +2,9 @@
   "name": "j.a.m-session",
   "description": "",
   "version": "1.0.0",
+  "engines":{
+    "node": "18.13.0"
+  },
   "main": "index.js",
   "scripts": {
     "dev": "react-scripts start",
