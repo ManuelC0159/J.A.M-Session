@@ -3,8 +3,16 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import './profile.css';
+import useProfileData from '../context/useProfileData';
 
 export default function PaymentForm() {
+  const [profileData, setProfileData] = useProfileData()
+  const handleChange = (event) => {
+    setProfileData({
+    ...profileData,
+      [event.target.name]: event.target.value,
+    });
+  };
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
@@ -19,6 +27,7 @@ export default function PaymentForm() {
             fullWidth
             autoComplete="cc-name"
             variant="standard"
+            onChange={handleChange}
           />
         </Grid>
         <Grid item xs={20} md={6}>
@@ -29,6 +38,7 @@ export default function PaymentForm() {
             fullWidth
             autoComplete="cc-number"
             variant="standard"
+            onChange={handleChange}
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -38,6 +48,7 @@ export default function PaymentForm() {
             fullWidth
             autoComplete="cc-csc"
             variant="standard"
+            onChange={handleChange}
           />
         </Grid><Grid item xs={12} md={6}>
           <TextField
@@ -46,6 +57,7 @@ export default function PaymentForm() {
             fullWidth
             autoComplete="cc-csc"
             variant="standard"
+            onChange={handleChange}
           />
         </Grid>
         

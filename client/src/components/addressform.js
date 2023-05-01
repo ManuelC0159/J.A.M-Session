@@ -4,8 +4,16 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import useProfileData from '../context/useProfileData';
 
 export default function AddressForm() {
+const [profileData, setProfileData] = useProfileData()
+  const handleChange = (event) => {
+    setProfileData({
+    ...profileData,
+      [event.target.name]: event.target.value,
+    });
+  };
   return (
     
     <React.Fragment>
@@ -16,12 +24,13 @@ export default function AddressForm() {
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="firstName"
+            id="firstName" 
             name="firstName"
             label="First name"
             fullWidth
             autoComplete="given-name"
             variant="standard"
+            onChange={handleChange}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -33,6 +42,7 @@ export default function AddressForm() {
             fullWidth
             autoComplete="family-name"
             variant="standard"
+            onChange={handleChange}
           />
         </Grid>
         
@@ -47,6 +57,7 @@ export default function AddressForm() {
             fullWidth
             autoComplete="shipping address-level2"
             variant="standard"
+            onChange={handleChange}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -56,6 +67,7 @@ export default function AddressForm() {
             label="State/Province/Region"
             fullWidth
             variant="standard"
+            onChange={handleChange}
           />
         </Grid>
        
@@ -68,6 +80,7 @@ export default function AddressForm() {
             fullWidth
             autoComplete="shipping country"
             variant="standard"
+            onChange={handleChange}
           />
         </Grid>
         
