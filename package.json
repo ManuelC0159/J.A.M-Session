@@ -2,7 +2,7 @@
   "name": "j.a.m-session",
   "description": "",
   "version": "1.0.0",
-  "engines":{
+  "engines": {
     "node": "18.13.0"
   },
   "main": "index.js",
@@ -29,6 +29,7 @@
     "bcryptjs": "^2.4.3",
     "concurrently": "^8.0.1",
     "detect-port-alt": "^1.1.6",
+    "dotenv": "^16.0.3",
     "serve": "^14.2.0"
   }
 }
