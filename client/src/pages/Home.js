@@ -8,7 +8,7 @@ import "./home.css";
 const Home = () => {
   
   return (
-    <div className="container">Welcome
+    <div className="container">
       <ResponsiveAppBar/>
       <div>
         <Link to ="/login">
